@@ -15,11 +15,11 @@ RUN (wget -O - http://www.magicermine.com/demos/curl/curl/curl-7.30.0.ermine.tar
     && rm -Rf /curl-7.30.0.ermine
 
 # Install JAVA
-RUN (curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u20-b26/jdk-8u20-linux-x64.tar.gz | tar xfz - -C /) \
-	&& mv /jdk1.8.0_20/jre /jre1.8.0_20 \
-	&& mv /jdk1.8.0_20/lib/tools.jar /jre1.8.0_20/lib/ext \
-	&& rm -Rf /jdk1.8.0_20 \
-	&& ln -s /jre1.8.0_20 /java
+RUN (curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u25-b17/jdk-8u25-linux-x64.tar.gz | tar xfz - -C /) \
+	&& mv /jdk1.8.0_25/jre /jre1.8.0_25 \
+	&& mv /jdk1.8.0_25/lib/tools.jar /jre1.8.0_25/lib/ext \
+	&& rm -Rf /jdk1.8.0_25 \
+	&& ln -s /jre1.8.0_25 /java
 
 # Set JAVA_HOME
 ENV JAVA_HOME /java
