@@ -21,6 +21,8 @@ RUN (curl -s -k -L -C - -b "oraclelicense=accept-securebackup-cookie" http://dow
 	&& rm -Rf /jdk1.8.0_20 \
 	&& ln -s /jre1.8.0_20 /java
 
+# UTF-8
+ENV LANG C.UTF-8
 # Set JAVA_HOME
 ENV JAVA_HOME /java
 # Add to Path
